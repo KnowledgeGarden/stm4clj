@@ -13,13 +13,16 @@
 (defn validate-db
   "Test query; return true if valid"
   []
-  (true) ;; for now
+  (println "validate")
+  true ;; for now
   )
 
 (defn create-db
   "Create a new database if one does not exist"
   []
+  (println "create")
   (if-not (validate-db)
         (d/create-database cfg))
+
   )
 

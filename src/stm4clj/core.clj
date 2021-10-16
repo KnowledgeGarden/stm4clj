@@ -8,4 +8,5 @@
 (defn foo
   "I don't do a whole lot."
   []
+  (pg/create-db)
   (println "Hello, World!"))
