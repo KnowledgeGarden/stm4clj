@@ -11,7 +11,10 @@
                   :dbname "example-db"}})
 
 (defn validate-db
-  "Test query; return true if valid"
+  "Test query; return true if valid
+   Must use a general query to see if some artifact exits
+   which could toss an exception
+  "
   []
   (println "validate")
   true ;; for now

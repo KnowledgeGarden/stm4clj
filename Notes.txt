@@ -1,0 +1,26 @@
+Notes.txt
+GOALS
+    Explore implementing a *simple topic map* in clojure; nothing particularly fancy.
+    Will work on tables in postgres
+    Runs from Datahike and persists in Datalog using various schemas.
+    Schemas mostly deal with node (SubjectProxy) specifications
+REFERENCES
+PLANS
+    Using clojure Protocols to define backside (and maybe other) APIs
+        For a pluggable backside
+            In the nearterm, we talk directly to postgress
+            In the long run, we talk, instead, to HyperKnowledge over http
+MASTER TODO
+    ON HOLD: Boot the postgres provider:ii postges.clj
+        entails runnning a quick query test to see that something is already there.
+        On hold because I can already talk to postgres in Datahike tests
+    Evolve and test protocols and implementations
+        There is protocols.clj which defines "core-proxy" which is a minimal API for proxies
+            Not sure we need that
+        Need: a backside prototocol - equivalent to an extend map interface
+    Implement the postgres backside
+    Implement some integration tests
+BUGS
+MUSINGS
+    20211112
+        Started keeping notes
