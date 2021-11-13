@@ -1,6 +1,6 @@
 (ns stm4clj.core
   (:require [stm4clj.types :as t]
-            [stm4clj.protocols :as p]
+            [stm4clj.proxy_api :as p]
             [datahike.api :as d]
             [stm4clj.postgres :as pg])
   (:gen-class))

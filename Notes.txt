@@ -24,3 +24,5 @@ BUGS
 MUSINGS
     20211112
         Started keeping notes
+        renamed prototols to proxy_api
+        added backside_api as a protocol

@@ -1,4 +1,4 @@
-(ns stm4clj.protocols)
+(ns stm4clj.proxy_api)
 
 ;; basic functions for any proxy
 (defprotocol core-proxy
