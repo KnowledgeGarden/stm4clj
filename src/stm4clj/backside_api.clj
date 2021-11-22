@@ -1,13 +1,13 @@
-(ns stm4clj.backsidee-api)
+(ns stm4clj.backside-api)
 
 (defprotocol backside
   (put [proxy])
   (get [locator])
   (delete [locator])
-  
+
 
   (find [query])
-  (list_proxiei [offset, count])
+  (list_proxies [offset, count])
 
   )
 
