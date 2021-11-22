@@ -1,13 +1,13 @@
 (ns stm4clj.backside-api)
 
-(defprotocol backside
-  (put [proxy])
-  (get [locator])
-  (delete [locator])
+(defprotocol IBackside
+  (put-proxy [proxy])
+  (get-proxy [locator])
+  (delete-proxy [locator])
 
 
-  (find [query])
-  (list_proxies [offset, count])
+  (find-proxy [query])
+  (list-proxies [offset, count])
 
   )
 

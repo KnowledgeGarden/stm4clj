@@ -1,7 +1,7 @@
 (ns stm4clj.proxy_api)
 
 ;; basic functions for any proxy
-(defprotocol core-proxy
+(defprotocol ICoreProxy
   (set-locator [locator])
   (get-locator [nil]) ;; all protocols take at least one argument
   (set-label [label])
