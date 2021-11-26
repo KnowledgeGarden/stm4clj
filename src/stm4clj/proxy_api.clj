@@ -2,14 +2,14 @@
 
 ;; basic functions for any proxy
 (defprotocol ICoreProxy
-  (set-locator [locator])
-  (get-locator [nil]) ;; all protocols take at least one argument
-  (set-label [label])
-  (get-label [nil])
-  (update-label [changetuple])
-  (add-edge [edge, direction])
-  (get-edge [id, direction])
-  (remove-edge [id, direction])
-  (update-edge [changestream])
-  (list-edges [direction]))
+  (set-locator [_ locator])
+  (get-locator [_])
+  (set-label [_ label])
+  (get-label [_])
+  (update-label [_ changetuple])
+  (add-edge [_ edge direction])
+  (get-edge [_ id direction])
+  (remove-edge [_ id direction])
+  (update-edge [_ changestream])
+  (list-edges [_ direction]))
 

@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="Leiningen: io.replikativ/datahike:0.3.6-SNAPSHOT">
-    <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/io/replikativ/datahike/0.3.6-SNAPSHOT/datahike-0.3.6-SNAPSHOT.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

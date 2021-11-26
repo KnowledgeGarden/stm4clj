@@ -1,13 +1,14 @@
-(ns stm4clj.backside-api)
+(ns stm4clj.backside_api)
+;; @see https://www.juxt.pro/blog/abstract-clojure#_protocols
 
 (defprotocol IBackside
-  (put-proxy [proxy])
-  (get-proxy [locator])
-  (delete-proxy [locator])
+  (put-proxy [_ proxy])
+  (get-proxy [_ locator])
+  (delete-proxy [_ locator])
 
 
-  (find-proxy [query])
-  (list-proxies [offset, count])
+  (find-proxy [_ query])
+  (list-proxies [_ offset count])
 
   )
 
