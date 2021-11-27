@@ -1,12 +1,11 @@
 (ns stm4clj.core
-  (:require [stm4clj.types :as t]
-            [stm4clj.proxy_api :refer [ICoreProxy]]
-            [stm4clj.backside_api :refer [IBackside]])
+  (:require
+    [stm4clj.DhPgBackside :as bc]
+    [stm4clj.backsideapi :as api])
   (:gen-class))
 
 (defn foo
-  "I don't do a whole lot."
   []
-  ;;(bs/boot-db)
-  (IBackside/put-proxy "foo")
+  (let [db (bc/->DhPgBackside)]
+    (api/put-proxy  db "foo"))
   (println "Hello, World!"))

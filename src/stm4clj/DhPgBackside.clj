@@ -1,36 +1,37 @@
 (ns stm4clj.DhPgBackside
-  (:require [stm4clj.types :as t]
-            [datahike.api :as d]
-            [stm4clj.postgres :as pg]
-            [stm4clj.backside_api :refer [IBackside]]))
+  (:require [stm4clj.backsideapi :as api])
+  ;;(:import (stm4clj.backside_api IBackside)))
+  )
+ ;; (:require                                                 ;;[stm4clj.types :as t]
+    ;;[datahike.api :as d]
+    ;;[stm4clj.postgres :as pg]
+  ;;  [stm4clj.backside_api :refer [IBackside]])
+  ;;(:import (stm4clj.backside_api IBackside)))
 ;;;;;;;;;;;
 ;; This is an IBackside implementation which
 ;; drives Datahike which is persisting with Postgres
 ;; @see https://www.juxt.pro/blog/abstract-clojure#_protocols
 ;;;;;;;;;;;
 
-(defn boot-db
-  "boot the database
-  Intended to eventually validate there is a database and
-  otherwise configure one if not"
-  []
-  (pg/create-db)
-  (println "Booted"))
+;;(defn boot-db
+;;  "boot the database
+;;  Intended to eventually validate there is a database and
+;;  otherwise configure one if not"
+;;  []
+;;  (pg/create-db)
+;;  (println "Booted"))
 
-;; db  = datase - basically Datahike
-(deftype DhPgBackside [db]
-  IBackside
-  (put-proxy [_ proxy]
+(defrecord DhPgBackside []
+  api/IBackside
+  (put-proxy [db proxy]
     (println "Put" proxy)
     nil)
-  (get-proxy [_ locator]
+  (get-proxy [db locator]
     nil)
-  (delete-proxy [_ locator]
+  (delete-proxy [db locator]
     nil)
-
-
-  (find-proxy [_ query]
+  (find-proxy [db query]
     nil)
-  (list-proxies [_ offset count]
+  (list-proxies [db offset count]
     nil)
 )
