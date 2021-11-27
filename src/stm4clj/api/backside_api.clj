@@ -1,5 +1,5 @@
 ;;
-(ns stm4clj.backsideapi)
+(ns stm4clj.api.backside_api)
 
 ;; map-like interface for various backside implementations
 

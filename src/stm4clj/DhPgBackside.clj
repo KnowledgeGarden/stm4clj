@@ -1,13 +1,8 @@
 (ns stm4clj.DhPgBackside
-  (:require [stm4clj.backsideapi :as api])
-  ;;(:import (stm4clj.backside_api IBackside)))
-  )
- ;; (:require                                                 ;;[stm4clj.types :as t]
-    ;;[datahike.api :as d]
-    ;;[stm4clj.postgres :as pg]
-  ;;  [stm4clj.backside_api :refer [IBackside]])
-  ;;(:import (stm4clj.backside_api IBackside)))
-;;;;;;;;;;;
+  (:require [stm4clj.api.backside_api :as api]
+            [datahike.api :as d]
+            [stm4clj.postgres :as pg]))
+ ;;;;;;;;;;
 ;; This is an IBackside implementation which
 ;; drives Datahike which is persisting with Postgres
 ;; @see https://www.juxt.pro/blog/abstract-clojure#_protocols

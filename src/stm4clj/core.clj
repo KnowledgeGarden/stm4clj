@@ -1,7 +1,7 @@
 (ns stm4clj.core
   (:require
     [stm4clj.DhPgBackside :as bc]
-    [stm4clj.backsideapi :as api])
+    [stm4clj.api.backside_api :as api])
   (:gen-class))
 
 (defn foo
